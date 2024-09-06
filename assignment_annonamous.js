@@ -57,3 +57,4 @@ let solve = Divide(2000, 10);
 setTimeout(()=>{
   console.log(solve);
 }, 4000);
+
