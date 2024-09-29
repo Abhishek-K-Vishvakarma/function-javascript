@@ -57,3 +57,35 @@ function Funname(firstName, lastName){
 let all_list_of_data = new Funname('Peter', 'Parker');
 
 console.log(all_list_of_data.getFullData());
+
+
+function Readers() {
+     this.name;
+     this.sub = 2;
+     this.p1;
+     this.p2;
+     this.compt = function (marks) {
+          marks.sub -= 1;
+          alert(this.name + " Pass  only " + marks.sub + " Subject ");
+     }
+     this.perc = function (per) {
+          per.p1 = 100;
+          per.p2 = 200
+          alert("Alan= " + per.p1 + "," + " Peter= " + per.p2);
+     }
+}
+
+var data1 = new Readers();
+var data2 = new Readers();
+data1.name = "Alan";
+data2.name = "Peter";
+data1.perc(data2);
+data1.compt(data2);
+data1.p1 = 100 / 200 * 100;
+data2.p2 = 200 / 200 * 100;
+alert(data2.name + " Pass " + " to " + data1.name + " into " + data2.p2);
+alert(data1.name + " Fail " + " by " + data1.p1);
+alert(data2.name + " destroye of " + data1.name + " by " + data1.sub + " Subject ");
+
+Readers.prototype.totalmarks = 200;
+alert("Total Marks of Subjects : " + data1.totalmarks);
